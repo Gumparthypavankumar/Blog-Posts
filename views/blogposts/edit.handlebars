@@ -1,0 +1,16 @@
+<h1>Edit A Blog Post</h1>
+<form action="/blogs/{{blog.id}}?_method=PUT" method="post">
+    <input type="hidden" name="_method" value="PUT">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" aria-describedby="title"
+      placeholder="Enter The Title" value="{{ blog.title }}">
+    <small id="title" class="form-text text-muted">Give Your Blog a cool Title.</small>
+  </div>
+  <div class="form-group">
+    <label for="details">Details</label>
+    <textarea name="details" class="form-control" id="details"
+      placeholder="Enter The details for your post to understand better" required>{{ blog.details }}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Edit Post</button>
+</form>

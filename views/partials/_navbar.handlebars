@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2">
+    <a class="navbar-brand text-dark" href="/">Blog Posts</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            {{#if userstatus}}
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink">Blog
+                    Posts</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a href="/blogs" class="dropdown-item">Blog Posts</a>
+                    <a href="/blogs/add" class="dropdown-item">Add Blog Post</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="/users/logout" class="nav-link text-primary">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a href="/users/login" class="nav-link text-primary">Login</a>
+            </li>
+            <li class="nav-item">
+                <a href="/users/register" class="nav-link text-primary">Register</a>
+            </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

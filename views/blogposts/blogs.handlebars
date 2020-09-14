@@ -1,0 +1,15 @@
+{{#each blogs}}
+<div class="card card-body">
+    <h4>{{ this.title }}</h4>
+    <p>{{ this.details }}</p>
+    <a class="btn btn-dark btn-block mb-2" href="blogs/update/{{this.id}}">Edit</a>
+    <form action="/blogs/{{this.id}}?_method=DELETE" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger btn-block">Delete</button>
+        </div>
+    </form>
+</div>
+{{else}}
+    <p>No Blog Posts</p>
+{{/each}}
