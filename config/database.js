@@ -1,7 +1,11 @@
-if(process.env.NODE_ENV === 'production'){
-    module.exports={
-        mongoURI : 'mongodb+srv://PavanKumar:Pavan123@blogposts-prod.uvl3c.mongodb.net/<dbname>?retryWrites=true&w=majority'
-    }
+if (process.env.NODE_ENV === "production") {
+  module.exports = {
+    mongoURI:
+      "mongodb+srv://PavanKumar:oqZ36k2428uDpitr@blogposts-prod.650gh.mongodb.net/blogposts?retryWrites=true&w=majority",
+  };
 } else {
-    module.exports ={mongoURI : 'mongodb://localhost/blogs'}
+  module.exports = {
+    mongoURI:
+      "mongodb+srv://PavanKumar:oqZ36k2428uDpitr@blogposts-prod.650gh.mongodb.net/blogposts?retryWrites=true&w=majority",
+  };
 }
